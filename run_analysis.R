@@ -14,7 +14,7 @@ readFile <- function(filePath)  read.table(file.path(folder, filePath))
 #1 Read and merges the training and the test sets to create one data set
 mergedData <- rbind(readFile('train/X_train.txt'), readFile('test/X_test.txt'))
 
-#2 Extracts only the mean and standard deviation for each measurement
+#2 Extract measurements on the mean and standard deviation of each measurement
 library(data.table)
 featureNames <- readFile('features.txt')[,2]
 columnList <- grep('(mean|std)\\(\\)', featureNames)
@@ -30,7 +30,7 @@ labelledActivities <- labels[activities]
 extractedData <- cbind(Activity = labelledActivities, extractedData)
 
 #4 Appropriately labels the data set with descriptive variable names
-#DH: Column names of data set are already set (see line 24 and line 31)
+#DH: Column names of data set are already set (see line 23 and line 30)
 
 #5 From the data set in step 4, create a second, independent tidy data set
 #  with the average of each variable for each activity and each subject
