@@ -18,7 +18,7 @@ filters and then sampled in fixed-width sliding windows of 2.56 sec and 50% over
 acceleration signal, which has gravitational and body motion components, was separated using a Butterworth low-pass filter
 into body acceleration and gravity. The gravitational force is assumed to have only low frequency components, therefore a
 filter with 0.3 Hz cutoff frequency was used. From each window, a vector of features was obtained by calculating variables
-from the time and frequency domain. For more details, see 'features_info.txt' and 'features.txt' provided with the original
+from the time and frequency domain. For more details, see `features_info.txt` and `features.txt` provided with the original
 data.
 
 ## Original Data Features
@@ -84,21 +84,21 @@ Additional vectors obtained by averaging the signals in a signal window sample. 
 * tBodyGyroMean
 * tBodyGyroJerkMean
 
-The complete list of variables of each feature vector is available in 'features.txt'
+The complete list of variables of each feature vector is available in `features.txt`
 
 ## Transformations
 The following transformations have been applied to the original dataset:
-*In the original data, datasets were split into a training and test dataset. These are now merged into a single dataset.
-*Only original features with mean() and std() in the name are selected. The merged dataset therefore only contains 66 out of 561 original features.
-*The activity and subject are appended to the merged dataset
-*The columns are named to be consistent with the original dataset
-*Mean and standard deviations were calculated for all 66 features. These were calculated per test subject per activity (30 subjects x 6 activities).
+* In the original data, datasets were split into a training and test dataset. These are now merged into a single dataset.
+* Only original features with mean() and std() in the name are selected. The merged dataset therefore only contains 66 out of 561 original features.
+* The activity and subject are appended to the merged dataset
+* The columns are named to be consistent with the original dataset
+* Mean and standard deviations were calculated for all 66 features. These were calculated per test subject per activity (30 subjects x 6 activities).
 
 ## Description tidy data
 The tidy dataset includes the following fields/columns:
 * Identification number of the subject who carried out the experiment (data type: integer)
 * Label describing the activity the subject performed (data type: character)
-* The  average and standard deviation for the following original measurement types. (data type: float)
+* The  average and standard deviation for the following original measurement types (data type: float)
     + tBodyAcc-mean()-X
     + tBodyAcc-mean()-Y
     + tBodyAcc-mean()-Z
